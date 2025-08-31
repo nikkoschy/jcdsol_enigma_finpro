@@ -16,7 +16,7 @@ Temporary Links<br />
 [Peserta Final Project](https://docs.google.com/spreadsheets/d/1tvG2yThNo9wpruLVxFFDKIIspchpGJCjpo1UUeKyvoc/edit?gid=0#gid=0) <br />
 <br />
 [Contoh Final Project - HR Analytics Classification (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
-[Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans)) <br />
+[Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans) <br />
 [Contoh Final Project - Washington DC Property Price (GitHub)](https://github.com/elvanselvano/purwadhika-final-project) <br />
 
 (To be updated)
