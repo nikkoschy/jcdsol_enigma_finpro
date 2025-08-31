@@ -14,7 +14,7 @@ Temporary Links<br />
 [Purwadhika Peserta Final Project](https://docs.google.com/spreadsheets/d/1tvG2yThNo9wpruLVxFFDKIIspchpGJCjpo1UUeKyvoc/edit?gid=0#gid=0) <br />
 <br />
 [Enigma Eimeline (Google Sheets)](https://docs.google.com/spreadsheets/d/1LH6uB0zLUSgpdhkwH2f3I6e7Cp4oNIRi3rzWtG1HwKs/edit?gid=0#gid=0) <br />
-[Progress and discussion (Google Slides)](https://docs.google.com/presentation/d/18lBgVzDrODngBx9keRG78iONqheEk_HNUkvHiViFCEs/edit?slide=id.g3789ff5af8c_0_14#slide=id.g3789ff5af8c_0_14)<br />
+[Enigma Progress and discussion (Google Slides)](https://docs.google.com/presentation/d/18lBgVzDrODngBx9keRG78iONqheEk_HNUkvHiViFCEs/edit?slide=id.g3789ff5af8c_0_14#slide=id.g3789ff5af8c_0_14)<br />
 <br />
 [Contoh Final Project - HR Analytics Classification (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
 [Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans) <br />
