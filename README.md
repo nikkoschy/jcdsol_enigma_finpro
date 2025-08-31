@@ -13,8 +13,10 @@ Temporary Links<br />
 [Purwadhika Final Project Guideline (PDF View)](https://drive.google.com/file/d/1d9D6Bo7BsQTQpMxS22usg4Ez8s3yp-nC/view) <br />
 [Standar Penilaian](https://drive.google.com/file/d/10Ai7bfIiugji4s0wE8T7JNZOQL55pgyW/view) <br />
 [Absensi Mentoring](https://docs.google.com/spreadsheets/u/0/d/1AA8XZMa5BLs86aV48svQKwSYGOUI6ow3CFKDhGm2VnE/view) <br />
-[Contoh Final Project](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
 [Peserta Final Project](https://docs.google.com/spreadsheets/d/1tvG2yThNo9wpruLVxFFDKIIspchpGJCjpo1UUeKyvoc/edit?gid=0#gid=0) <br />
-
+<br />
+[Contoh Final Project - HR Analytics Classification (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
+[Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans)) <br />
+[Contoh Final Project - Washington DC Property Price (GitHub)](https://github.com/elvanselvano/purwadhika-final-project) <br />
 
 (To be updated)
