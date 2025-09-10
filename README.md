@@ -19,5 +19,6 @@ Temporary Links<br />
 [Contoh Final Project - HR Analytics Classification (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
 [Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans) <br />
 [Contoh Final Project - Washington DC Property Price (GitHub)](https://github.com/elvanselvano/purwadhika-final-project) <br />
+[Contoh Final Project - Bank Marketing Campaign - Younanouv (GitHub)](https://github.com/Yunanouv/Optimizing-Bank-Marketing-Campaign/tree/main) <br />
 
 (To be updated)
