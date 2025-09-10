@@ -22,7 +22,7 @@ Temporary Links<br />
 
 [Referensi Project - Bank Marketing Campaign - Younanouv (GitHub)](https://github.com/Yunanouv/Optimizing-Bank-Marketing-Campaign/tree/main) <br />
 [Referensi Project - hyperopt: Insurance Claim Prediction - Krisnatp (GitHub)](https://github.com/krisnatp-gh/hyperopt-demo/) <br />
-[Referensi - NIM Novobanco](https://www.novobanco.com/content/dam/novobanco-com/investors/financial-disclosures/2024/4trimestre/Novobanco_2024_Results%2520ENG.pdf) <br />
+[Referensi - NIM Novobanco (return from deposit 2.79%)](https://www.novobanco.com/content/dam/novobanco-com/investors/financial-disclosures/2024/4trimestre/Novobanco_2024_Results%2520ENG.pdf) <br />
 [Referensi - Minimum Deposit Novobanco](https://www.novobanco.pt/english/boas-vindas-account) <br />
 [Referensi - Call Cost Portugal via Rebtel](https://www.rebtel.com/en/rates/portugal/?srsltid=AfmBOoozBydCfTrm6c21hjt8G1ltu_QtH_XpkF8ZX23rTHoHlTcVCrUv) <br />
 
