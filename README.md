@@ -209,6 +209,20 @@ Based on our data analysis, we recommend telemarketing efforts towards clients w
 
 Additionally, our machine learning model has shown that demographic characteristics do not significantly impact in predicting  the subscription decision. Instead, numbers of macroeconomic indicators and call durations would bring more impact in predicting the likelihood of subscribing to a term deposit program.
 
+## Model Limitation
+
+1. This model is limited to historical data that is available.
+2. The model predicts of customers' term deposit subscription within these conidtions of data and features within the observed data:
+   - Customer age between 18-83 years old.
+   - Marketing call contact duration up to 4199 seconds.
+   - Number of contact performed during the campaign campaign up to 56 times.
+   - Number of contact performed before this campaign up to 7 times.
+   - And limitation of various economic indicators of the time the campaign ran.
+3. Prediction may vary with new observations outside of the previously available data.
+4. Changes in models used, features used, to treat the similar data would yield a different result in predicting customer's decision.
+
+
+
 ## Future Improvement Recommendations
 1. Since our model relies heavily on macroeconomic measures, further improvement toward the model is to find a way to either (a) find the possibility to simplify the macroeconomic features, and (b) emphasize more on customer characteristic features. This is to ensure we can capture better patterns of customer characteristics to predict the behaviors on term deposit subscription.     
 2. There needs to be a better set of components involved within the calculation of the costs and incomes as this was highly assumed through various sources of reference and reports to calculate the income and costs, while there is a probability of invalidity within the calculation method.
