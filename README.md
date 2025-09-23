@@ -68,7 +68,7 @@ It is an acronym from Return on Investment, a key metric that measures the profi
 
 
 ## Business Problem 
-A bank in Portugal is conducting a Telemarketing program to offer Deposits to their customers. These deposits are important as a foundation of a bank’s ability to lend money or make investments (1). Current success rate (or we called it as conversion rate) is quite low, only 11.27% success from overall contacted customers. Based on the ROII calculation, it shows a negative direction of return, it lost 85% from the expense of cost marketing. The objective of this goal is to conduct data analysis and machine learning models to give insights into the strategic way of conducting telemarketing as well as selecting potential customer leads for deposit programs. By doing so, it will allow the bank to focus its efforts on high-potential leads and create some technical strategic telemarketing activities to increase the net profit, ROI and Conversion Rate of the campaign program.
+A bank in Portugal is conducting a Telemarketing program to offer Deposits to their customers. These deposits are important as a foundation of a bank’s ability to lend money or make investments (1). Current success rate (or we called it as conversion rate) is quite low, only 11.27% success from overall contacted customers. Based on the ROII calculation, it shows a negative direction of return, it lost 42% from the expense of cost marketing. The objective of this goal is to conduct data analysis and machine learning models to give insights into the strategic way of conducting telemarketing as well as selecting potential customer leads for deposit programs. By doing so, it will allow the bank to focus its efforts on high-potential leads and create some technical strategic telemarketing activities to increase the net profit, ROI and Conversion Rate of the campaign program.
  
  
 ## Goal
@@ -171,11 +171,8 @@ As the models tuned with the target of achieving high F2 score, it is prevalent 
 
 1. Non Model Business Performance
 In this scenario the bank contacts all customers, which in test data shown conversion rate of ~11%. Here is the cost revenue calculation :
- - Total deposit subscription = 928 customers
  - Conversion Rate = 11%
- - Total cost = call cost on all customers + interest expense of the deposit income + deposit income tax = € 737,805
- - Total income = income from deposit (all deposit values are counted as productive asset)
- - Net ROI (Return on Investment) = -85%
+ - Net ROI (Return on Investment) = -42%
 
 2. XGBoost Classifier Business Performance
 - Following the prediction modelling using XGBoost classifier tuned to the best performance we could achieve, ROI was shown to land at 12% and 47% conversion rate.
@@ -193,7 +190,7 @@ In this scenario the bank contacts all customers, which in test data shown conve
 3. Comparison:
 - Without machine learning model:
   - Conversion rate : 11%
-  - Net ROI : -85%
+  - Net ROI : -42%
 - With machine learning model:
   - Conversion rate : 47%
   - Net ROI : 11%
