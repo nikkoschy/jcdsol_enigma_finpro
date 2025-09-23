@@ -218,6 +218,8 @@ Based on our data analysis, we recommend telemarketing efforts towards clients w
 
 Additionally, our machine learning model has shown that demographic characteristics do not significantly impact in predicting  the subscription decision. Instead, numbers of macroeconomic indicators and call durations would bring more impact in predicting the likelihood of subscribing to a term deposit program.
 
+As macroeconomic indicators are the highly predictive features to the target, some strategies are needed in using this model. This is because some macroeconomic indicators might change in different time periods (daily, monthly, quarterly). Clear, timely, and swift coordination between the Bank and the telemarketing team to act according to the current or forecasted macroeconomic indicators when the campaign is going to take place.
+
 ## Model Limitation
 
 1. The model used is limited to historical data that is available.
