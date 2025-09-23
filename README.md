@@ -5,7 +5,53 @@ This is a final project as part of Data Science and Machine Learning Bootcamp pr
 ## Overview
  
 This project aims to develop a machine learning model to predict the list of customers which likely will subscribe to a deposit. Therefore, the telemarketing team can filter potential customers to be contacted to offer the product. By having this, it is expected that the telemarketing efforts could contribute more in increasing ROI as well as the net benefits for banks gained from the deposit. In addition, this project tries to formulate a strategic approach to optimize the Telemarketing Campaign through insights gained from data analysis.
- 
+
+## Data Analysis Insight
+### Campaign Conversion 
+<img width="515" height="410" alt="Untitled-1" src="https://github.com/user-attachments/assets/c684b1a3-cabe-4c78-b1e8-810a72c9cb74" />
+
+The pie chart shows that the deposit campaign had a **low conversion rate of just 11.3%**. This result suggests that the telemarketing efforts may not have been conducted strategically. Further discussion of conversion rate and other business performances will be discussed in another section.
+
+### Duration
+
+<img width="1990" height="1055" alt="Untitled" src="https://github.com/user-attachments/assets/7c0c8cee-cf16-48b6-bd72-fc9ae5c437c1" />
+
+**Calls over 7.5 minutes have a higher conversion rate suggests that a quick pitch is not effective.** The script should be designed to foster a meaningful discussion about the customer's financial goals.
+
+### Campaign Calls
+
+<img width="992" height="590" alt="Untitled-1" src="https://github.com/user-attachments/assets/29346398-4726-4824-b3d7-d1b6c5b0ced8" />
+
+**One call has the highest conversion rate. As the number of repeated calls increases, the conversion rate decreases.** It is recommended that the telemarketing team optimize the very first call to maximize the chance of a customer subscribing. Follow-up calls can be conducted, but conversion rates drop significantly after the fourth call.
+
+### Age Group Analysis
+
+<img width="989" height="590" alt="Untitled" src="https://github.com/user-attachments/assets/7ee7a2eb-d73e-46d5-96ed-79438795269c" />
+
+**The age groups with the most telemarketing calls, 25-34 and 35-44, had some of the lowest conversion rates.**
+In contrast, **customers aged 65 and older had the highest conversion rate at 47.28%**, despite receiving a relatively small number of calls. In addition, the similar trend can be shown in **18 - 24 group**, when it's proportion only contribute 2.58% to overall sample, it's **conversion rate could be considered as high among the other, 23.89%.**
+
+### Job Analysis
+
+<img width="989" height="590" alt="Untitled" src="https://github.com/user-attachments/assets/a13067ee-93cc-4de0-b761-3870bc029893" />
+
+**The conversion rate for students is the highest among all groups, yet they represent a small portion of the overall sample,** accounting for only 2.11% of the people contacted. Similarly, the retired group has the second-highest conversion rate, even though their aggregate number is significantly smaller than the three largest job categories: admin, blue-collar, and technician.
+
+Conversely, **the blue-collar group—the second-largest group in the campaign—has the lowest conversion rate.** The admin group, which is the largest, shows an acceptable conversion rate, indicating a more favorable balance between volume and conversion success.
+
+### Macroeconomic Indicators
+
+<img width="1790" height="1989" alt="Untitled" src="https://github.com/user-attachments/assets/f48cb30c-b93f-444a-91d9-8adeef4b6fa2" />
+
+Based on the graph, three macroeconomic indicators—emp.var.rate, euribor3m, and nr.employed—show a similar trend. This trend is also mirrored in the number of customers contacted each month.
+
+In March and April, a small number of customers were contacted, and the three macroeconomic indicators were also at lower values. Moreover, September, October, and December also show a low number of contacts and low values for the same three indicators. Interestingly, the conversion rate for these months is higher compared to May, June, July, and November.
+
+Two other macroeconomic indicators, cons.price.idx and cons.conf.idx, show different trends. The cons.price.idx generally follows the same trend as the other three indicators but with some key differences. For instance, while the other three indicators declined in September, cons.price.idx showed its decline earlier in July. Additionally, cons.price.idx had only a slight increase in November, whereas the other three indicators showed a significant rise.
+
+Finally, cons.conf.idx appears to have a trend opposite to the three similar macroeconomic indicators. When those three indicators decrease, cons.conf.idx shows an increase.
+
+
 ## Business Process Calculation
  
 There are several terminologies that we use to describe the overall business process of telemarketing activities to give a picture how we calculate the potential benefit of this program. 
