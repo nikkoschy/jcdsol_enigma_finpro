@@ -95,11 +95,8 @@ Cost analysis will be broken down as follows:
 F2 score : chosen because of the offer for the need to use recall and precision. This model needs to gather more customer leads who will likely subscribe to the deposit bank while at the same time need to keep the number of contacted customers rejecting to subscribe deposit remain low. Using F-2 score as metrics evaluation allows us to give more weight to the recall so that the model could reach more positive customer leads by making sure it has considerable precision, ensuring that the contacted customer with negative result does not exceed the contacted  customer leads with positive result. 
  
 ## Initial Profit Calculation
-<img width="655" height="461" alt="image" src="https://github.com/user-attachments/assets/03bf9310-687f-4802-b73c-c01b6f455824" />
+<img width="659" height="465" alt="image" src="https://github.com/user-attachments/assets/9e520968-1305-4ac8-925a-334bc41df07f" />
 
-
- 
- 
 Cost Benefit Analysis (CBA)
  
 Below is the calculation of CBA using the best machine learning model :
@@ -169,7 +166,8 @@ Both XGBoost and LightGBM showed a healthy combination of F2 scores between the 
 As the models tuned with the target of achieving high F2 score, it is prevalent within the confusion matrix of two tuned models that the false negatives are lower comparative to the false positives. This can be explained by the target scoring of F2 score and the higher cost of the false negatives attributed to the score selection.
 
 ## Business Scenario Simulation
-<img width="807" height="161" alt="image" src="https://github.com/user-attachments/assets/eb37af47-2bfe-4e87-9898-986a32d1e0e6" />
+<img width="585" height="123" alt="image" src="https://github.com/user-attachments/assets/c12071c1-aa85-4fa7-a23b-5bf7c4a7ec61" />
+
 
 1. Non Model Business Performance
 In this scenario the bank contacts all customers, which in test data shown conversion rate of ~11%. Here is the cost revenue calculation :
