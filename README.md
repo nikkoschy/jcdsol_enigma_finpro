@@ -1,7 +1,12 @@
 # Optimizing Telemarketing Bank Marketing Campaign 
  
 This is a final project as part of Data Science and Machine Learning Bootcamp provided by Purwadika Technology School. The data reference can be accessed through this link : [Bank Marketing Dataset](https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset).
- 
+
+Note:
+Our Streamlit of this model can be found :
+- Local : Within this repository named 'streamlit.py'
+- [Streamlit App](https://jcdsol-enigma-finpro-bank.streamlit.app/)
+
 ## Overview
  
 This project aims to develop a machine learning model to predict the list of customers which likely will subscribe to a deposit. Therefore, the telemarketing team can filter potential customers to be contacted to offer the product. By having this, it is expected that the telemarketing efforts could contribute more in increasing ROI as well as the net benefits for banks gained from the deposit. In addition, this project tries to formulate a strategic approach to optimize the Telemarketing Campaign through insights gained from data analysis.
