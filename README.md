@@ -161,6 +161,15 @@ The next step of the process was to select the final two models to go through hy
 
 Both XGBoost and LightGBM showed a healthy combination of F2 scores between the train set, test set, and its differences. While Random Forest Classifier exhibited overfitting with more than 0.5 score difference between the two sets. And Logistic Regression showed a highly consistent score between the train and test scores. While this seems to be good, it shows that there might be too little wiggle room for the model to actually make any change in its results in hyperparameter tuning. Due to this reason, the focus will be with XGBoost and LightGBM classifiers.
 
+## Models
+
+### LightGBM Classifier
+LightGBM Classifier is a decision-tree based boosting classifier with an emphasize on the leaf node growth. Boosting classifiers in general explains the method of classifying sample of data and giving more learning weight the incorrectly classified sample and treat said sample with new model. In LightGBM classifier, this growth of learning is heavily based on the leaves the model needs to give more learning.
+
+### XGBoost Classifier
+XGBoost Classifier is also a decision-tree based boosting classifier with the most notable differentiator being the emphasis on growing the level/depth of the tree. Boosting classifiers in general explains the method of classifying sample of data and giving more learning weight the incorrectly classified sample and treat said sample with new model. In XGBoost classifier, this growth of learning is done for every nodes within a tree level.
+
+
 ## Model Evaluation After Hyperparameter Tuning
 <img width="959" height="425" alt="image" src="https://github.com/user-attachments/assets/db9bc172-4a4d-478e-9fed-b82c4f2a3d32" />
 As the models tuned with the target of achieving high F2 score, it is prevalent within the confusion matrix of two tuned models that the false negatives are lower comparative to the false positives. This can be explained by the target scoring of F2 score and the higher cost of the false negatives attributed to the score selection.
@@ -211,7 +220,7 @@ Additionally, our machine learning model has shown that demographic characterist
 
 ## Model Limitation
 
-1. This model is limited to historical data that is available.
+1. The model used is limited to historical data that is available.
 2. The model predicts of customers' term deposit subscription within these conidtions of data and features within the observed data:
    - Customer age between 18-83 years old.
    - Marketing call contact duration up to 4199 seconds.
