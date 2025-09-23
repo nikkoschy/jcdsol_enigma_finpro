@@ -168,4 +168,54 @@ Both XGBoost and LightGBM showed a healthy combination of F2 scores between the 
 <img width="959" height="425" alt="image" src="https://github.com/user-attachments/assets/db9bc172-4a4d-478e-9fed-b82c4f2a3d32" />
 As the models tuned with the target of achieving high F2 score, it is prevalent within the confusion matrix of two tuned models that the false negatives are lower comparative to the false positives. This can be explained by the target scoring of F2 score and the higher cost of the false negatives attributed to the score selection.
 
+## Business Scenario Simulation
+<img width="807" height="161" alt="image" src="https://github.com/user-attachments/assets/eb37af47-2bfe-4e87-9898-986a32d1e0e6" />
+
+1. Non Model Business Performance
+In this scenario the bank contacts all customers, which in test data shown conversion rate of ~11%. Here is the cost revenue calculation :
+ - Total deposit subscription = 928 customers
+ - Conversion Rate = 11%
+ - Total cost = call cost on all customers + interest expense of the deposit income + deposit income tax = € 737,805
+ - Total income = income from deposit (all deposit values are counted as productive asset)
+ - Net ROI (Return on Investment) = -85%
+
+2. XGBoost Classifier Business Performance
+- Following the prediction modelling using XGBoost classifier tuned to the best performance we could achieve, ROI was shown to land at 12% and 47% conversion rate.
+  - TP (Predicted Deposit, Actual Deposit) : 850
+  - FP (Predicted Deposit, Actual No Deposit) : 973
+  - FN (Predicted No Deposit, Actual Deposit) : 78
+  - TN (Predicted No Deposit, Actual No Deposit) : 6,337
+- Campaign will only be applicable to customers who are predicted to Deposit (TP and FP) :
+  - Total deposit subscription = 850 of 1,825 customers
+  - Conversion Rate = 850/(850+973) * 100 = 46 %
+  - Total revenue = 845 x € 500 x income interest rate = € 20,297
+  - Total cost = € 18,116
+  - Net ROI (Return on Investment) = (€ 20,297 - € 18,116) / € 18,116 = 11%
+
+3. Comparison:
+- Without machine learning model:
+  - Conversion rate : 11%
+  - Net ROI : -85%
+- With machine learning model:
+  - Conversion rate : 47%
+  - Net ROI : 11%
+
+4. Impact of modeling:
+- Conversion Rate improved by 4.2 times.
+- Return in Investment (ROI) improved by 112 fold.
+
+## Conclusion
+1. The majority of the collected features have a significant relationship with customers' decisions in subscribing bank deposits. Only 2 features, housing and loan, which insignificantly influence the customer’s decision.
+2. We developed the best model through a set of processes of data cleaning, preprocessing, and model benchmarking to land with XGBoost Classifier.
+3. The model scored F2 score of ~61%, with the ability to predict true positives while suppressing the amount of false negatives to maximize customer capture. In summary, the developed model is shown to be able to help The Portugal Bank improve the marketing campaign's Conversion Rate 4.2 times and Return On Investment (ROI) 112 fold from the past marketing campaign done by the Bank.  
+
+## Recommendation
+Based on our data analysis, we recommend telemarketing efforts towards clients who are shown to have higher conversion rates.
+
+Additionally, our machine learning model has shown that demographic characteristics do not significantly impact in predicting  the subscription decision. Instead, numbers of macroeconomic indicators and call durations would bring more impact in predicting the likelihood of subscribing to a term deposit program.
+
+## Future Improvement Recommendations
+1. Since our model relies heavily on macroeconomic measures, further improvement toward the model is to find a way to either (a) find the possibility to simplify the macroeconomic features, and (b) emphasize more on customer characteristic features. This is to ensure we can capture better patterns of customer characteristics to predict the behaviors on term deposit subscription.     
+2. There needs to be a better set of components involved within the calculation of the costs and incomes as this was highly assumed through various sources of reference and reports to calculate the income and costs, while there is a probability of invalidity within the calculation method.
+
 
