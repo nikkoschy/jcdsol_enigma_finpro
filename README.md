@@ -129,16 +129,20 @@ Source of the data : [Bank Marketing Dataset]([url](https://www.kaggle.com/datas
 ### Customer Demographic
 <img width="763" height="500" alt="image" src="https://github.com/user-attachments/assets/f241c130-b482-40af-9459-e954b066a6e9" />
 
-Information During This Campaign
+### Information During This Campaign
+
 <img width="765" height="436" alt="image" src="https://github.com/user-attachments/assets/8414aaef-da6b-468e-9e3b-474803f80754" />
 
-Information From Previous Campaign
+### Information From Previous Campaign
+
 <img width="762" height="263" alt="image" src="https://github.com/user-attachments/assets/127b2e8f-e050-4736-8f4d-da69c2f6efe1" />
  
-Customer Socio-Economic
+### Customer Socio-Economic
+
 <img width="762" height="252" alt="image" src="https://github.com/user-attachments/assets/a1421575-4c32-4fc4-816b-8faca03c9c4f" />
 
-Target
+### Target
+
 <img width="766" height="108" alt="image" src="https://github.com/user-attachments/assets/a37c0dcb-6514-414f-8326-0b3a71bf10d4" />
 
 ## Machine Learning
