@@ -1,29 +1,167 @@
-# jcdsol_enigma_finpro
-Working repository for Enigma team's final project submission
+# Optimizing Telemarketing Bank Marketing Campaign 
+ 
+This is a final project as part of Data Science and Machine Learning Bootcamp provided by Purwadika Technology School. The data reference can be accessed through this link : [Bank Marketing Dataset]([url](https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset)).
+ 
+## Overview
+ 
+This project aims to develop a machine learning model to predict the list of customers which likely will subscribe to a deposit. Therefore, the telemarketing team can filter potential customers to be contacted to offer the product. By having this, it is expected that the telemarketing efforts could contribute more in increasing ROI as well as the net benefits for banks gained from the deposit. In addition, this project tries to formulate a strategic approach to optimize the Telemarketing Campaign through insights gained from data analysis.
+ 
+## Business Process Calculation
+ 
+There are several terminologies that we use to describe the overall business process of telemarketing activities to give a picture how we calculate the potential benefit of this program. 
+ 
+### Revenue :
+This is the amount of the customer's deposit. In this case, each customer who confirms yes to subscribe the deposit is expected to subscribe to the minimum deposit amount, that is 500€. Total revenue is the deposit subscribed by the customer crossed with the total customer applied for the deposit program. 
+ 
+> Total Revenue = 500€(minimum deposit) x total customer subscribing deposit
+ 
 
-Collaborators:
-- Nabila Yasminuljannah Rahmani
-- Mangaraja Kemal Achmad
-- Nikko Sucahyo
+### Total Cost :
+− Interest Net Income :
+This is the interest that will be gained by the bank for each deposit applied by the customer. This will be calculated by crossing the total deposit with Portugal Net Interest Margin (NIM), 2.79%(3).
+ 
+> Interest Net Income = Total Revenue x NIM (2.79%)
 
-Temporary Links<br />
-[Purwadhika Final Project Kickstart Meeting (PDF View)](https://drive.google.com/file/d/1rL4-ClX8CaR3Lx7spByxZ4ccpVzoIhy-/view) <br />
-[Purwadhika Final Project Guideline (PDF View)](https://drive.google.com/file/d/1d9D6Bo7BsQTQpMxS22usg4Ez8s3yp-nC/view) <br />
-[Purwadhika Standar Penilaian (PDF View)](https://drive.google.com/file/d/10Ai7bfIiugji4s0wE8T7JNZOQL55pgyW/view) <br />
-[Purwadhika Absensi Mentoring](https://docs.google.com/spreadsheets/u/0/d/1AA8XZMa5BLs86aV48svQKwSYGOUI6ow3CFKDhGm2VnE/view) <br />
-[Purwadhika Peserta Final Project](https://docs.google.com/spreadsheets/d/1tvG2yThNo9wpruLVxFFDKIIspchpGJCjpo1UUeKyvoc/edit?gid=0#gid=0) <br />
-<br />
-[Enigma Timeline (Google Sheets)](https://docs.google.com/spreadsheets/d/1LH6uB0zLUSgpdhkwH2f3I6e7Cp4oNIRi3rzWtG1HwKs/edit?gid=0#gid=0) <br />
-[Enigma Progress and discussion (Google Slides)](https://docs.google.com/presentation/d/18lBgVzDrODngBx9keRG78iONqheEk_HNUkvHiViFCEs/edit?slide=id.g3789ff5af8c_0_14#slide=id.g3789ff5af8c_0_14)<br />
-<br />
-[Contoh Final Project - HR Analytics Classification (GitHub)](https://github.com/Baron197/HR_Analytics_Classification/blob/master/HR_Analytics_Classification_Example.ipynb) <br />
-[Contoh Final Project - Customer Classification RFM & K-Means (GitHub)](https://github.com/muhammadnrafi/Segmentation-Customer-with-RFM-KMeans) <br />
-[Contoh Final Project - Washington DC Property Price (GitHub)](https://github.com/elvanselvano/purwadhika-final-project) <br />
+However, interest net income includes the calculation and subtraction of interest expenses from the interest income. While it is before the taxes
 
-[Referensi Project - Bank Marketing Campaign - Younanouv (GitHub)](https://github.com/Yunanouv/Optimizing-Bank-Marketing-Campaign/tree/main) <br />
-[Referensi Project - hyperopt: Insurance Claim Prediction - Krisnatp (GitHub)](https://github.com/krisnatp-gh/hyperopt-demo/) <br />
-[Referensi - NIM Novobanco (return from deposit 2.79%)](https://www.novobanco.com/content/dam/novobanco-com/investors/financial-disclosures/2024/4trimestre/Novobanco_2024_Results%2520ENG.pdf) <br />
-[Referensi - Minimum Deposit Novobanco](https://www.novobanco.pt/english/boas-vindas-account) <br />
-[Referensi - Call Cost Portugal via Rebtel](https://www.rebtel.com/en/rates/portugal/?srsltid=AfmBOoozBydCfTrm6c21hjt8G1ltu_QtH_XpkF8ZX23rTHoHlTcVCrUv) <br />
+− Interest Income :
+Interest income represents the interest gained by the bank for every asset (represented by the deposit). Based on the Net Interest Margin (NIM) formula (3) explained below, we will be utilizing the ratio between income and interest from the reference (2).
+ 
+> NIM = (Interest Income - Interest Expense) / Assets x 100%
 
-(To be updated)
+As the ratio between interest expense is known (41.58%) we now understand that interest rate used will be 4.78%
+
+> Interest Income = 2.79% (NIM) / (1 - 41.58% (expense to income ratio))
+
+− Interest Expense:
+Interest expense is an outflow measure of interest paid on deposits, borrowings, and other interest-bearing liabilities. This component reflects the cost of funds used for operations within the context of assets and its interests. This is calculated with interest expense to income ratio (2).
+ 
+> Interest Expense = Interest Income * 41.58% (expense to income ratio)
+ 
+− Deposit Tax :
+This term for the tax that the bank should pay from the gain of interest(2). This number is gained by crossing the total of Interest Deposit with 21%. 
+ 
+> Deposit Tax = Interest Net Income x Tax (21%)
+ 
+− Cost of Marketing : 
+This is a prediction cost for calling 1 customer to offer the deposit bank program. We calculate that to succeed the calls, it is expected 4.04€/ 2.62€ for 1 customer call which already includes estimation of 3 calls with maximum duration 7.5 minutes for each.
+
+> Total Cost = Interest Expense + Deposit Tax + Cost of Marketing
+ 
+
+### Profit & Loss :
+This term is the amount of net profit or loss from the calculation of Total Revenue minus The Total Cost which the Bank will gain. This profit will be used to compare the success of the model we built. 
+ 
+> Profit & Loss = Total Revenue - Total Cost
+ 
+ 
+### Conversion Rate :
+Conversion rate shows a percentage number of people subscribing deposit per total customers contacted. 
+
+<img width="637" height="56" alt="image" src="https://github.com/user-attachments/assets/156f70c8-9f27-4f0f-8067-c4e1eab76dcc" />
+
+
+### ROI :
+It is an acronym from Return on Investment, a key metric that measures the profitability of deposit program activities by comparing the revenue or profit generated by those activities to their associated costs. It can be used to measure the effectiveness of Telemarketing campaigns specifically for deposit programs.
+
+<img width="327" height="57" alt="image" src="https://github.com/user-attachments/assets/6f262137-0da6-43ec-b1ad-5bd925fe9368" />
+
+
+## Business Problem 
+A bank in Portugal is conducting a Telemarketing program to offer Deposits to their customers. These deposits are important as a foundation of a bank’s ability to lend money or make investments (1). Current success rate (or we called it as conversion rate) is quite low, only 11.27% success from overall contacted customers. Based on the ROII calculation, it shows a negative direction of return, it lost 85% from the expense of cost marketing. The objective of this goal is to conduct data analysis and machine learning models to give insights into the strategic way of conducting telemarketing as well as selecting potential customer leads for deposit programs. By doing so, it will allow the bank to focus its efforts on high-potential leads and create some technical strategic telemarketing activities to increase the net profit, ROI and Conversion Rate of the campaign program.
+ 
+ 
+## Goal
+The primary project of this goal is :
+Increasing the ROMI and net profit of the bank. This by ensuring that the profit generated from the deposits subscribed by the customer significantly exceeds the costs of telemarketing campaigns. 
+ 
+The goals to be achieved in project are:
+1. Creating a machine learning model to filter customer leads with high potential to subscribe deposit banks.
+2. Arranging strategic approach to gather more potential customer leads based on data analysis.
+ 
+## Error Types and Consequences
+
+- Type 1 Error: False Positive
+Consequence: More expense on call cost, potentially reducing the deposit net income from True Positives
+
+- Type 2 Error: False Negative
+Consequence: Missed opportunities for getting deposit net income. Higher false negatives would mean lower possible total net profit.
+
+Cost Analysis
+Cost analysis will be broken down as follows:
+<img width="751" height="298" alt="image" src="https://github.com/user-attachments/assets/2fb3c5ac-2e6a-4f5e-8e17-0518416d8caa" />
+
+## Evaluation Metrics 
+F2 score : chosen because of the offer for the need to use recall and precision. This model needs to gather more customer leads who will likely subscribe to the deposit bank while at the same time need to keep the number of contacted customers rejecting to subscribe deposit remain low. Using F-2 score as metrics evaluation allows us to give more weight to the recall so that the model could reach more positive customer leads by making sure it has considerable precision, ensuring that the contacted customer with negative result does not exceed the contacted  customer leads with positive result. 
+ 
+## Initial Profit Calculation
+<img width="655" height="461" alt="image" src="https://github.com/user-attachments/assets/03bf9310-687f-4802-b73c-c01b6f455824" />
+
+
+ 
+ 
+Cost Benefit Analysis (CBA)
+ 
+Below is the calculation of CBA using the best machine learning model :
+ 
+- True Positive (Contacted and Subscribing): 850
+  - Deposit: € 425,000
+  - Interest income : € 20,297
+  - ROI: 11%
+  - Conversion rate : 47%
+ 
+False Positive (Contacted and Not Subscribing) : 973
+  - Cost:  € 18,116
+True Negative (Not Contacted and Potential to Subscribe)
+False Negative (Not Contacted and Not Potential to Subscribe)
+ 
+ 
+
+## Data Understanding
+This project uses data-set from kaggle.com which captures telemarketing activity of Portugal bank marketing campaigns to offer the customer subscription of a deposit. If after all the customer has agreed to place a deposit, the target variable is marked ‘yes’, otherwise ‘no’.
+ 
+This data-set also covers information of previous campaign history and some macro economic indicators which likely have an impact on the decision of applying for a deposit program.
+ 
+Source of the data : [Bank Marketing Dataset]([url](https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset)).
+ 
+## Features Information
+ 
+### Customer Demographic
+<img width="763" height="500" alt="image" src="https://github.com/user-attachments/assets/f241c130-b482-40af-9459-e954b066a6e9" />
+
+Information During This Campaign
+<img width="765" height="436" alt="image" src="https://github.com/user-attachments/assets/8414aaef-da6b-468e-9e3b-474803f80754" />
+
+Information From Previous Campaign
+<img width="762" height="263" alt="image" src="https://github.com/user-attachments/assets/127b2e8f-e050-4736-8f4d-da69c2f6efe1" />
+ 
+Customer Socio-Economic
+<img width="762" height="252" alt="image" src="https://github.com/user-attachments/assets/a1421575-4c32-4fc4-816b-8faca03c9c4f" />
+
+Target
+<img width="766" height="108" alt="image" src="https://github.com/user-attachments/assets/a37c0dcb-6514-414f-8326-0b3a71bf10d4" />
+
+## Machine Learning
+
+## Machine Learning Steps : Data Preparation
+This section contains measures and operations to prepare data to be later be able to be processed through the steps of machine learning activities in a more informative form of features. The data preparation process, especially the feature engineering steps, will be included in a preprocessing pipeline alongside with the machine learning model. The steps explained below
+<img width="771" height="389" alt="image" src="https://github.com/user-attachments/assets/79876e33-4545-4d14-81e8-47265ce8f77a" />
+
+ 
+## Model Selections: Cross Validation Score of Test Set
+In this stage of the project, we tested different models with our dataset, which includes both the train set and test set. First, the test data were scored through cross_val_score with the scoring method of F2 score (Fbeta score with beta = 2).
+<img width="424" height="179" alt="image" src="https://github.com/user-attachments/assets/ff42bc0a-9f01-44d9-a091-7e13211b66b7" />
+
+As shown within the table above, F2 scores of the cross validation scoring showed LightGBM, XGBoost, and Logistic Regression being the top 3, first to third by the order of the models mentioned. Random Forest Classifier shown to be the lowest of all tested models.
+
+## Model Overfitting Evaluation & Selection
+The next step of the process was to select the final two models to go through hyperparameter tuning measures. This was determined by finding out the F2 score of each train-fitted model and compared the train-fitted model into the test sets. Result can be seen below:
+<img width="1000" height="112" alt="image" src="https://github.com/user-attachments/assets/4f459fae-dc77-4e2a-9016-4b18997c33ae" />
+
+Both XGBoost and LightGBM showed a healthy combination of F2 scores between the train set, test set, and its differences. While Random Forest Classifier exhibited overfitting with more than 0.5 score difference between the two sets. And Logistic Regression showed a highly consistent score between the train and test scores. While this seems to be good, it shows that there might be too little wiggle room for the model to actually make any change in its results in hyperparameter tuning. Due to this reason, the focus will be with XGBoost and LightGBM classifiers.
+
+## Model Evaluation After Hyperparameter Tuning
+<img width="959" height="425" alt="image" src="https://github.com/user-attachments/assets/db9bc172-4a4d-478e-9fed-b82c4f2a3d32" />
+As the models tuned with the target of achieving high F2 score, it is prevalent within the confusion matrix of two tuned models that the false negatives are lower comparative to the false positives. This can be explained by the target scoring of F2 score and the higher cost of the false negatives attributed to the score selection.
+
+
